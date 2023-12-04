@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/tienda.css">
+
+    <title>Calculadora de préstamos</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        #resultAlert {
+            display: none;
+        }
+
+        .calculator-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .calculator-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .calculator-form input {
+            margin-bottom: 15px;
+        }
+
+        .calculator-result {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-primary">
+
+    <div class="container calculator-container">
+
+        <div class="calculator-header">
+            <img src="IMAGENES/logo.png" alt="Logo" height="80px" width="80px" class="mb-2">
+            <h3 class="mb-2">Calculadora de préstamos</h3>
+        </div>
+
+        <form class="calculator-form" id="loanForm">
+            <div class="mb-3">
+                <input type="number" class="form-control" placeholder="Capital" id="loanAmount"  required>
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" placeholder="Interés" id="loanTerm" step="0.01" 
+                    required>
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" placeholder="Plazo en meses" id="interestRate" 
+                    required>
+            </div>
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary w-100" id="calculateBtn">Calcular</button>
+            </div>
+            <div>
+                <div id="resultAlert" class="alert alert-primary text-center" role="alert">
+                    <label for="resultLabel" class="form-label"></label>
+                    <label id="resultLabel" class="form-label" style="font-weight: bold;"></label>
+                </div>
+
+
+            </div>
+            <p class="text-center "> Desarollado por el Ing. Angel Castillo </p>
+
+        </form>
+
+    </div>
+
+    <script type="text/javascript" src="JS/prestamo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
